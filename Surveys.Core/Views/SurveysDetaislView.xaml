@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Surveys.Core.Views.SurveysDetaislView"
+             Title="Nueva enncuestas" >
+
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackLayout>
+            
+            <Label Text="Nombre"/>
+            <Entry x:Name="entryName"
+                   Placeholder="..." 
+                   PlaceholderColor="Gray"/>
+
+            <Label Text="Fecha de nacimiento" />
+            <DatePicker x:Name="dpikerBirthdate" TextColor="Gray"/>
+
+            <Label Text="Equipo favorito"/>
+
+            <Grid>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Label x:Name="labelFavoriteTeam"/>
+                <Button Grid.Column="1"
+                        Text="..."
+                        Clicked="btnFavoriteTeam"/>
+            </Grid>
+            
+
+        </StackLayout>
+
+        <Button Grid.Row="1"
+                Text="Aceptar"
+                Clicked="btnOk"/>
+
+
+    </Grid>    
+    
+</ContentPage>
